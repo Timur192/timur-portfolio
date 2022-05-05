@@ -1,0 +1,246 @@
+.card {
+  width: 330px;
+  height: 420px;
+  position: relative;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background-color:
+    rgba(255, 255, 255, .05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background:
+    radial-gradient(#FFB800,
+      #FFB800);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down;
+}
+
+@keyframes move-up {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.a {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.a-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.a-right {
+  flex: 1;
+}
+
+.a-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.a-title {
+  font-weight: 400;
+}
+
+.a-sub {
+  margin: 20px 0px;
+}
+
+.a-award {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.a-award-texts {
+  width: 70%;
+}
+
+.a-award-title {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+  .a {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .a-left {
+    width: 100%;
+  }
+
+  .a-card {
+    height: 30vh;
+  }
+
+  .a-card.bg,
+  .a-award {
+    display: none;
+  }
+
+  .a-right {
+    padding: 20px;
+  }
+}
+
+.blokk {
+  display: inline-block;
+  padding: 10px;
+}
+
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 0px;
+  display: flex;
+  height: 10px;
+  width: 200px;
+}
+
+.progress-value,
+.ph,
+.git,
+.html,
+.css,
+.js,
+.react {
+  box-shadow: 0 0px 20px 1px #FFB800;
+  border-radius: 100px;
+  background: #FFB800;
+  height: 10px;
+  width: 0;
+}
+
+.ph {
+  animation: load-ph 5s normal forwards;
+}
+
+.git {
+  animation: load-git 5s normal forwards;
+}
+
+.html {
+  animation: load-html 5s normal forwards;
+}
+
+.css {
+  animation: load-css 5s normal forwards;
+}
+
+.js {
+  animation: load-js 5s normal forwards;
+}
+
+.react {
+  animation: load-react 5s normal forwards;
+}
+
+@keyframes load-ph {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes load-git {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes load-html {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes load-css {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes load-js {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes load-react {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
