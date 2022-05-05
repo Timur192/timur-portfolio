@@ -40,24 +40,16 @@
 
 .i-title-wrapper {
   height: 100%;
-  animation: move 10s ease-in-out infinite alternate;
+  animation: move 7s ease-in-out infinite alternate;
 }
 
 @keyframes move {
-  25% {
+  50% {
     transform: translateY(-50px);
   }
 
-  50% {
-    transform: translateY(-100px);
-  }
-
-  75% {
-    transform: translateY(-150px);
-  }
-
   100% {
-    transform: translateY(-150px);
+    transform: translateY(-100px);
   }
 }
 
@@ -103,16 +95,12 @@
   }
 
   .i-left-wrapper {
-
-    padding: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
   }
 
   .i-desc {
     display: none;
   }
-
 }
